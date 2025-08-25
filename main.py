@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
+from selenium.webdriver.chrome.options import Options
 import time
 import json
 
@@ -20,12 +21,21 @@ def write_state(data):
         json.dump(data, file, ensure_ascii=False, indent=2)
 
 
+def create_driver():
+    options = Options()
+    options.add_argument("--headless")  # Run in headless mode
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    service = Service(ChromeDriverManager().install())
+    return webdriver.Chrome(service=service, options=options)
+
+
 def process_li(li: WebElement, n: int):
     try:
         # li_text = li.text.strip()
         # print(li_text)
         li.click()
-        time.sleep(8)
+        time.sleep(3)
         ul_info = driver.find_element(
             By.XPATH, "/html/body/div[7]/div/div[1]/div/div/ul"
         )
@@ -38,7 +48,7 @@ def process_li(li: WebElement, n: int):
             By.XPATH, "/html/body/div[7]/div/div[1]/footer/button"
         )
         close_btn.click()
-        time.sleep(2)
+        time.sleep(1)
         return True
     except:
         return False
@@ -50,12 +60,14 @@ def process_li(li: WebElement, n: int):
 
 
 service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service)
+driver = create_driver()
 
 state = read_state()
+start_time = time.time()
 
 for i in range(9, 13):
-    driver.get(f"https://eng.iotexpo.com.cn/sz/ExhibitorList.html?hallNo={i}")
+    url = f"https://eng.iotexpo.com.cn/sz/ExhibitorList.html?hallNo={i}"
+    driver.get(url)
 
     time.sleep(10)
 
@@ -65,6 +77,13 @@ for i in range(9, 13):
     state[str(i)]["max_counter"] = len(li_elements)
 
     for li in li_elements:
+        if time.time() - start_time > 300:
+            driver.quit()
+            driver = create_driver()
+            start_time = time.time()
+            driver.get(url)
+            time.sleep(10)
+
         title = li.text.strip()
         if title in state[str(i)]["list"]:
             continue
