@@ -346,3 +346,7 @@ Exhibitor Name:Taizhou Rafferty Electronic Label Co.LTD
 BoothNumber:9D86
 Company Address:温岭市上马工业区启明路14号
 Company Introduction:Taizhou Rafferty Electronic Label Co.LTD was established in 2007 and is located in Wenling City, Zhejiang Province. Ruifeidi Electronic Tag Co., Ltd. focuses on the production of RFID aluminum etching antennas, with a full set of advanced production lines, mature production technology and various types of automatic testing equipment, strict quality control system, and experienced professionals to carry out inspections to ensure stable product quality and comply with relevant standards and certifications. The annual output of tags and antennas can reach 4 billion pieces.
+Exhibitor Name:foshan Qiaoen Communication Equipment Co.，Ltd.
+BoothNumber:9D7
+Company Address:佛山市三水区宝云路8号5座
+Company Introduction:佛山市桥恩通讯设备有限公司坐落在全国天线之乡——广东省佛山市三水区，是一家集天线研发、生产和销售为一体的高新技术企业。桥恩通讯专注于RFID超高频天线领域，团队核心成员均从事天线行业10余载，拥有自主研发、创新能力，能够提供成熟、稳定的技术支持和服务。桥恩通讯坚持自主创新、提高研发力量、提高员工素养，以应对不断变化的市场，满足用户需求，为客户创造价值！
