@@ -21,13 +21,12 @@ def write_state(data):
         json.dump(data, file, ensure_ascii=False, indent=2)
 
 
+driver_path = ChromeDriverManager().install()
+
+
 def create_driver():
-    options = Options()
-    options.add_argument("--headless")  # Run in headless mode
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    service = Service(ChromeDriverManager().install())
-    return webdriver.Chrome(service=service, options=options)
+    service = Service(driver_path)
+    return webdriver.Chrome(service=service)
 
 
 def process_li(li: WebElement, n: int):
@@ -59,7 +58,6 @@ def process_li(li: WebElement, n: int):
         # process_li(li, n + 1)
 
 
-service = Service(ChromeDriverManager().install())
 driver = create_driver()
 
 state = read_state()
@@ -77,16 +75,19 @@ for i in range(9, 13):
     state[str(i)]["max_counter"] = len(li_elements)
 
     for li in li_elements:
+        title = li.text.strip()
+        if title in state[str(i)]["list"]:
+            print(f"Skipping: {title}")
+            continue
+
+        print(f"Processing: {title}")
+
         if time.time() - start_time > 300:
             driver.quit()
             driver = create_driver()
             start_time = time.time()
             driver.get(url)
             time.sleep(10)
-
-        title = li.text.strip()
-        if title in state[str(i)]["list"]:
-            continue
 
         processed = process_li(li, i)
         if processed:

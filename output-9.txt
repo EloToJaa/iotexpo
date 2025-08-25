@@ -155,3 +155,48 @@ BoothNumber:9C35-1
 Company Address:龙岗区坪地街道中心社区埔仔路26号杰科产业园
 Company Introduction: SHENZHEN UNIONTEK SOFTWARE TECHNOLOGY CO.,LTD,founded in 2017, is an ecological chain enterprise of GIEC. Adhering to the mission of improving enterprise productivity, we provide end-to-end services of software and hardware development, production and manufacturing of mobile data terminals for global technology brand customers.The products are used in medical, logistics, retail, manufacturing, public utilities and other scenarios, in the form of PDA, tablet, vehicle-mounted computer, scanner, printer and accessories.
 The company adheres to the corporate values of "integrity, responsibility, pursuit of excellence, achievement of customers" and makes unremitting efforts to become "a global competitive mobile data terminal R&D and manufacturing service provider".
+Exhibitor Name:Varicut
+BoothNumber:9D11
+Company Address:威海路77号
+Company Introduction:Varicut (Jiangsu) Smart Technology Co.,Ltd. formerly known as Varicut (Shanghai) Electronics Component Co.,Ltd,has modern standard roduction plant which is located in Taicang city, Jiangsu Province. After more than ten years of development and integration, the company has become an advanced manufacturing enterprise integrating R&D, production and sales with label printing technology and material application technology as its core competence. Our company’s products cover precision die-cutting materials, industrial identification solutions,label printing systems and other related businesses which are widely used in electronics manufacturing, energy, Telecommunication, medical, automotive, MRO and other industrial manufacturing and installation fields, and we supply to many of the world's top 500 enterprises.
+Exhibitor Name:Jiangsu Zhenzhen New Material Technology Co.,Ltd.
+BoothNumber:9D51
+Company Address:宿迁市沭阳县潼阳镇潼东社区湖潼路222号厂房
+Company Introduction:江苏祯臻新材料科技有限公司于2021年成立于江苏省宿迁市沭阳县，专公司已经成功研发出高透明PC、磨砂PC、 黑色防静电PC、透明导电PC、卡基PC、激光雕刻PC膜、PETG 透明膜 PETG 卡基(芯层和 面层PP以及功能化产品百于种。产品主要应用于电子电器、汽车、电脑键盘、主板、电源绝缘、镀镜、标牌 、薄膜开关、IMD、身份证件照、装饰面板等
+Exhibitor Name:Dongguan Chiteng Technology Co., Ltd.
+BoothNumber:9D73
+Company Address:东莞市
+Company Introduction:SHENZHEN JINGRUI HENGTONG ELECTRONICS CO.. LTD. WAS FOUNDED IN2013, LOCATED IN SHENZHEN NANSHAN DISTRIT HITECH PARK, IS AHIGH-TECH COMPANY SPECIALIZING IN THE DEVELOPMENT AND SALES OF BAR-CODE SCANNER GUNS, 2D SCANNING PLATFORMS, BLUETOOTH BARCODE SCANNERS, DATA COLLECTORS AND INDUSTRIAL IOT EQUIPMENT AND OTHER SCAN-NING PRODUCTS.
+IN ORDER TO STRENGTHEN THE PRODUCTION QUALITY ANO SUPPLY CHAIN SUP.PORT, IN 2019, THE ESTABLISHMENT OF DONGGUAN CHITENG TECHNOLOGY CO.LTD, PLANT AREA OF MORE THAN 2,200 SQUARE METERS, IS LOCATED IN TANGX-IA TOWN, DONGGUAN, THE INDUSTRIAL MANUFACTURING INDUSTRY, THE COMPANY RELIES ON EXCELLENT R & D STRENGTH AND STRICT QUALITY MANAGE.MENT SYSTEM, THE COMPANY HAS SUCCESSFULLY PASSED THEISO9OO1 QUALITY MANAGEMENT SYSTEM,ISO14001 ENVIRONMENTAL MANAGEMENT SYSTEM,AND OTHER INTERNATIONAL AUTHORITATIVESTANDARDS CERTIFICATION, SUC.CESS! CHOPPED 33 CORE PATENTS PRODUCTS ARE EXPORTED TO MORE THAN 80COUNTRIES AND REGIONS AROUND THE WORLD, TO UNDERTAKE THE INDUSTRYOEM/OOM BUSINESS,TRUSTED BY CUSTOMERS.THE COMPANY IS COMMITTED TO BECOME THE WORLD'S LEADING BARCODESCANNER AND MOBILE DATA COLLECTION AND INDUSTRY SOLUTIONS HARD.WARE PROVIDER.
+Exhibitor Name:ADVANCED CARD SYSTEMS LIMITED
+BoothNumber:9C37-1
+Company Address:中国香港九龙湾宏泰道23号 Manhattan Place 41楼4108-10室
+Company Introduction:ACS develops and provides smart card operating systems (COS) and readers to facilitate the implementation of smart card-based systems for various applications and industries. ACS products are compliant with major industrial standards, ensuring safe and compatible operations. Products are divided into seven product families: Smart Cards & Smart Card Operating Systems, PC-Linked Smart Card Readers, Contactless Readers, Mobile Card Readers, Smart Card Readers with PIN-Pad, Smart Card Reader Modules, and Automatic Fare Collection (AFC) Readers. ACS also offers customization for some of these products, to meet specific needs of customers.
+Exhibitor Name:Yongxinda
+BoothNumber:9D17
+Company Address:惠州市惠城区水口街道乐创城一期26栋4楼
+Company Introduction:深圳市永芯达智能科技有限公司(Shenzhen Yongxin da Intelligent Technology Co. , Ltd.)是国内较早从事RFID PVC数据卡片生产及相关设备、系统集成研发工作的高科技企业；经过多年的生产实践敬业的精神，已将所生产的符合国际标准（IS0781X系列）的PVC数据卡片产品推向全国、覆盖28个省、市、自治区、部分产品远销港、澳、台及欧美地区。
+Exhibitor Name:INTELLICONNECT(TIANJING) TECHNOLOGY CO,LTD
+BoothNumber:9A30
+Company Address:天津市
+Company Introduction:新智物连是国内智能柜管理跟踪、追溯提供商，自成立以来我们将利用 RFID、称重传感器、AI视觉算法等先进技术提供解决方案，广泛应用于为医疗、制造业、物流、军事等不同市场的全球客户提供物联网解决方案，且所有配件选用国内生产。
+Exhibitor Name:Yulong Digital Technology Co., Ltd
+BoothNumber:9B3
+Company Address:深圳市南山区西丽街道曙光社区中山园路1001号TCL科学园区F1栋601
+Company Introduction: Yulong DT is a leading source manufacturer of body-worn cameras. The headquarters and R&D center are located in Shenzhen, China, and we have factories in both Shenzhen and Dongguan, as well as a branch office in Hong Kong.
+The core team has 16 years of R&D experience in mobile monitoring technology in the public safety industry. We accumulated rich experience in developing products with MTK chips, and focused on personalized customization and intelligent processing of 5G/4G smart body-worn cameras, docking station, charging bases, and supporting software.
+The products and solutions of Yulong DT have won the trust of security and communication enterprises, law enforcement agencies, and governments in more than 40 countries. In the future, relying on our professional technical team and advanced production processes, we will support every partner in achieving their business goals through OEM and ODM cooperation.
+Exhibitor Name:Harbin Shenzhen Technology Corporation
+BoothNumber:9D47-2
+Company Address:深圳市光明区凤凰街道凤凰社区侨凯路459号C1栋1103
+Company Introduction:Shenzhen Hashen Special Anti counterfeiting Materials Co., Ltd. is a high-tech R&D enterprise of the integrated solution for RFD label printing antenna, which was successfully incubated by Professor Feng Huanhuan of the Institute of Integrated Circuits in the Shenzhen Campus of Harbin Institute of Technology on the basis of the State Key Laboratory, Shenzhen Nobel Prize Laboratory and Shenzhen Peacock Team. The company is committed to the development, design, printing process, and overall solution of printing conductive paste for RFID tag printing antennas. It is a solution provider that provides production, research and development, and process technology support.
+Exhibitor Name:shengzhengshijiruixingdianziyouxiangongsi
+BoothNumber:9D58
+Company Address:深圳市光明区合水口第三工业区
+Company Introduction:国内第一家智能卡内部超薄LED生产制造商
+Exhibitor Name:Hana RFID
+BoothNumber:9A9
+Company Address:海外
+Company Introduction:Hana RFID, a leader in the identification/IoT industry, offers an array of RFID products to the unique demands of our customers. Our products serve as crucial semi-finished products for authenticating histories, streamlining tracking and inventory management, and enhancing consumer interactions in ever-growing markets.
+
+As a global RFID inlay manufacturer with manufacturing locations in both China and the USA, Hana supports the RFID ecosystem — leading service bureaus, converters, and system integrators — with the highest quality, ARC-certified inlay products. Its dedication ensures brand owners and retailers receive unparalleled performance, driving satisfaction and success in every application.

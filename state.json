@@ -32,12 +32,24 @@
       "Shenzhen Sincoole Co., Ltd",
       "DRAGON GUARD",
       "Hohhot Liao Yee Technology Co.,Ltd.",
-      "SHENZHEN UNIONTEK SOFTWARE TECHNOLOGY CO.,LTD."
+      "SHENZHEN UNIONTEK SOFTWARE TECHNOLOGY CO.,LTD.",
+      "Jiangsu Zhenzhen New Material Technology Co.,Ltd.",
+      "Dongguan Chiteng Technology Co., Ltd.",
+      "ADVANCED CARD SYSTEMS LIMITED",
+      "Yongxinda",
+      "INTELLICONNECT(TIANJING) TECHNOLOGY CO,LTD",
+      "Yulong Digital Technology Co., Ltd",
+      "Harbin Shenzhen Technology Corporation",
+      "shengzhengshijiruixingdianziyouxiangongsi",
+      "Hana RFID"
     ]
   },
   "10": {
-    "max_counter": 0,
-    "list": []
+    "max_counter": 255,
+    "list": [
+      "南京四维向量科技有限公司",
+      "SHENZHEN MENGSHIQI CULTURE INDUSTRY CO.LTD"
+    ]
   },
   "11": {
     "max_counter": 0,
