@@ -62,7 +62,7 @@ for i in range(9, 13):
     url = f"https://eng.iotexpo.com.cn/sz/ExhibitorList.html?hallNo={i}"
     driver.get(url)
 
-    time.sleep(20)
+    time.sleep(10)
 
     ul_element = driver.find_element(By.ID, "co-main-ct")
     li_elements = ul_element.find_elements(By.TAG_NAME, "li")
