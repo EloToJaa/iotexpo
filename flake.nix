@@ -13,7 +13,11 @@
             selenium
             webdriver-manager
           ]))
-        chromium
+        chromedriver
+        google-chrome
+
+        # Create a script to run google-chrome-stable
+        (writeShellScriptBin "google-chrome" "exec -a $0 ${google-chrome}/bin/google-chrome-stable $@")
       ];
     };
   };
