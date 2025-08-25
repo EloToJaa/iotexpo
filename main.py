@@ -6,6 +6,7 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.chrome.options import Options
 import time
 import json
+import sys
 
 STATE_PATH = "state.json"
 
@@ -31,31 +32,25 @@ def create_driver():
 
 def process_li(li: WebElement, n: int):
     try:
-        # li_text = li.text.strip()
-        # print(li_text)
-        li.click()
-        time.sleep(5)
+        onclick = li.get_attribute("onclick")
+        driver.execute_script(onclick)
+        time.sleep(3)
+
         ul_info = driver.find_element(
             By.XPATH, "/html/body/div[7]/div/div[1]/div/div/ul"
         )
-        # img_src = ul_info.find_element(By.TAG_NAME, "img").get_attribute("src")
-        # print(ul_info.text)
         with open(f"output-{n}.txt", "a", encoding="utf-8") as file:
             file.write(ul_info.text.strip() + "\n")
-        # print(img_src)
         close_btn = driver.find_element(
             By.XPATH, "/html/body/div[7]/div/div[1]/footer/button"
         )
-        close_btn.click()
+        onclick = close_btn.get_attribute("onclick")
+        driver.execute_script(onclick)
         time.sleep(1)
+
         return True
     except:
         return False
-        # if n >= 10:
-        #     return
-        # time.sleep(10)
-        # print(f"Reprocessing {n}")
-        # process_li(li, n + 1)
 
 
 driver = create_driver()
@@ -67,7 +62,7 @@ for i in range(9, 13):
     url = f"https://eng.iotexpo.com.cn/sz/ExhibitorList.html?hallNo={i}"
     driver.get(url)
 
-    time.sleep(10)
+    time.sleep(20)
 
     ul_element = driver.find_element(By.ID, "co-main-ct")
     li_elements = ul_element.find_elements(By.TAG_NAME, "li")
