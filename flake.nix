@@ -11,7 +11,9 @@
         (python313.withPackages (p:
           with p; [
             selenium
+            webdriver-manager
           ]))
+        chromium
       ];
     };
   };
