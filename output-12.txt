@@ -1187,3 +1187,11 @@ Exhibitor Name:MORNSUN Guangzhou Science & Technology Co., Ltd.
 BoothNumber:12C26
 Company Address:黄埔区南云四路8号
 Company Introduction:MORNSUN was established in July 1998 with a registered capital of Thirty million RMB. It has more than 2,600 employees (include 500+ R&D engineers) and more than 60,000 square meters of office and R & D and production bases. Over the past 23 years, MORNSUN applied 1300+ intellectual property rights at home and abroad. MORNSUN manufactures high-quality products include Enclosed power supply, AC/DC converter, DC/DC converter, industrial interface communication modules, IGBT driver and LED driver, IC etc. The trademark has been registered in more than 50 countries and regions around the world. We are committed to providing one-stop power solutions for industries control, medical, energy, electricity, railway, smart transportation, smart cities and other fields to improve production efficiency and energy efficiency, while reducing bad effects on the environment.
+Exhibitor Name:致遠経営株式会社
+BoothNumber:12D71-5
+Company Address:
+Company Introduction:
+Exhibitor Name:apatech-motors
+BoothNumber:12D71-8
+Company Address:
+Company Introduction:
