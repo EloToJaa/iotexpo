@@ -34,7 +34,7 @@ def process_li(li: WebElement, n: int):
         # li_text = li.text.strip()
         # print(li_text)
         li.click()
-        time.sleep(3)
+        time.sleep(5)
         ul_info = driver.find_element(
             By.XPATH, "/html/body/div[7]/div/div[1]/div/div/ul"
         )
@@ -82,12 +82,12 @@ for i in range(9, 13):
 
         print(f"Processing: {title}")
 
-        if time.time() - start_time > 300:
-            driver.quit()
-            driver = create_driver()
-            start_time = time.time()
-            driver.get(url)
-            time.sleep(10)
+        # if time.time() - start_time > 300:
+        #     driver.quit()
+        #     driver = create_driver()
+        #     start_time = time.time()
+        #     driver.get(url)
+        #     time.sleep(10)
 
         processed = process_li(li, i)
         if processed:
