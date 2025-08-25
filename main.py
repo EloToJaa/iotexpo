@@ -34,7 +34,7 @@ def process_li(li: WebElement, n: int):
     try:
         onclick = li.get_attribute("onclick")
         driver.execute_script(onclick)
-        time.sleep(3)
+        time.sleep(1.5)
 
         ul_info = driver.find_element(
             By.XPATH, "/html/body/div[7]/div/div[1]/div/div/ul"
@@ -46,7 +46,7 @@ def process_li(li: WebElement, n: int):
         )
         onclick = close_btn.get_attribute("onclick")
         driver.execute_script(onclick)
-        time.sleep(1)
+        time.sleep(0.5)
 
         return True
     except:
