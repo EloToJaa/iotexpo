@@ -3,10 +3,10 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
-from selenium.webdriver.chrome.options import Options
 import time
 import json
-import sys
+import openpyxl
+from openpyxl.worksheet.table import Table, TableStyleInfo
 
 STATE_PATH = "state.json"
 
@@ -30,7 +30,13 @@ def create_driver():
     return webdriver.Chrome(service=service)
 
 
-def process_li(li: WebElement, n: int):
+def extract_li_text(li: WebElement) -> str:
+    span_text = li.find_element(By.TAG_NAME, "span").text
+    text = li.text.replace(span_text, "").strip()
+    return text
+
+
+def process_li(li: WebElement, title: str):
     try:
         onclick = li.get_attribute("onclick")
         driver.execute_script(onclick)
@@ -39,8 +45,17 @@ def process_li(li: WebElement, n: int):
         ul_info = driver.find_element(
             By.XPATH, "/html/body/div[7]/div/div[1]/div/div/ul"
         )
-        with open(f"output-{n}.txt", "a", encoding="utf-8") as file:
-            file.write(ul_info.text.strip() + "\n")
+
+        li_infos = ul_info.find_elements(By.TAG_NAME, "li")
+        if len(li_infos) < 5:
+            return []
+
+        image_src = li_infos[0].get_attribute("src")
+        exhibitor_name = extract_li_text(li_infos[1])
+        booth_number = extract_li_text(li_infos[2])
+        company_address = extract_li_text(li_infos[3])
+        company_introduction = extract_li_text(li_infos[4])
+
         close_btn = driver.find_element(
             By.XPATH, "/html/body/div[7]/div/div[1]/footer/button"
         )
@@ -48,15 +63,31 @@ def process_li(li: WebElement, n: int):
         driver.execute_script(onclick)
         time.sleep(0.5)
 
-        return True
+        return [
+            title,
+            exhibitor_name,
+            booth_number,
+            company_address,
+            image_src,
+            company_introduction,
+        ]
     except:
-        return False
+        return []
 
 
 driver = create_driver()
 
+header_row = [
+    "Company Name",
+    "Exhibitor Name",
+    "Booth Number",
+    "Company Address",
+    "Logo URL",
+    "Company Introduction",
+]
+xlsx_data = [header_row]
+
 state = read_state()
-start_time = time.time()
 
 for i in range(9, 13):
     url = f"https://eng.iotexpo.com.cn/sz/ExhibitorList.html?hallNo={i}"
@@ -77,17 +108,42 @@ for i in range(9, 13):
 
         print(f"Processing: {title}")
 
-        # if time.time() - start_time > 300:
-        #     driver.quit()
-        #     driver = create_driver()
-        #     start_time = time.time()
-        #     driver.get(url)
-        #     time.sleep(10)
-
-        processed = process_li(li, i)
+        processed = process_li(li, title)
         if processed:
             state[str(i)]["list"].append(title)
             write_state(state)
+
+    workbook = openpyxl.Workbook()
+    sheet = workbook.active
+
+    sheet.title = f"Exhibitors IoT Expo China Hall {i}"
+
+    for row in xlsx_data:
+        sheet.append(row)
+
+    table_range = f"A1:F{len(xlsx_data)}"
+
+    table = Table(displayName="ExhibitorTable", ref=table_range)
+
+    style = TableStyleInfo(
+        name="TableStyleMedium9",
+        showFirstColumn=False,
+        showLastColumn=False,
+        showRowStripes=True,
+        showColumnStripes=True,
+    )
+    table.tableStyleInfo = style
+
+    sheet.add_table(table)
+    
+    for row in range(2, len(xlsx_data) + 1):
+        cell = sheet.cell(row=row, column=5)
+        cell.hyperlink = cell.value
+        cell.style = "Hyperlink"
+
+    xlsx_data = [header_row]
+
+    workbook.save(f"exhibitors-{i}.xlsx")
 
     time.sleep(20)
 
