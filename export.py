@@ -16,11 +16,13 @@ def remove_illegal(input: str) -> str:
     return re.sub(r"[\x00-\x1F]", "", input)
 
 
-def run_export(n: int, xlsx_data: list[list[str]], header_row: list[str]):
-    workbook = openpyxl.Workbook()
-    sheet = workbook.active
-
-    sheet.title = f"Exhibitors IoT Expo China Hall {n}"
+def run_export(
+    workbook: openpyxl.Workbook,
+    n: int,
+    xlsx_data: list[list[str]],
+    header_row: list[str],
+):
+    sheet = workbook.create_sheet(title=f"Exhibitors IoT Expo China Hall {n}")
 
     sheet.append(header_row)
     for row in xlsx_data:
@@ -49,8 +51,6 @@ def run_export(n: int, xlsx_data: list[list[str]], header_row: list[str]):
 
     xlsx_data = [header_row]
 
-    workbook.save(f"exhibitors-{n}.xlsx")
-
 
 state = read_state()
 header_row = [
@@ -61,4 +61,10 @@ header_row = [
     "Logo URL",
     "Company Introduction",
 ]
-run_export(10, state[str(10)]["data"], header_row)
+
+workbook = openpyxl.Workbook()
+
+for i in range(9, 13):
+    run_export(workbook, i, state[str(i)]["data"], header_row)
+
+workbook.save("exhibitors.xlsx")
