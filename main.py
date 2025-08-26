@@ -50,7 +50,7 @@ def process_li(li: WebElement, title: str):
         if len(li_infos) < 5:
             return []
 
-        image_src = li_infos[0].get_attribute("src")
+        image_src = li_infos[0].find_element(By.TAG_NAME, "img").get_attribute("src")
         exhibitor_name = extract_li_text(li_infos[1])
         booth_number = extract_li_text(li_infos[2])
         company_address = extract_li_text(li_infos[3])
