@@ -75,16 +75,6 @@ def process_li(li: WebElement, title: str):
 
 driver = create_driver()
 
-header_row = [
-    "Company Name",
-    "Exhibitor Name",
-    "Booth Number",
-    "Company Address",
-    "Logo URL",
-    "Company Introduction",
-]
-xlsx_data = [header_row]
-
 state = read_state()
 
 for i in range(9, 13):
