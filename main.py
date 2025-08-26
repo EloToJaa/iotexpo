@@ -40,7 +40,7 @@ def process_li(li: WebElement, title: str):
     try:
         onclick = li.get_attribute("onclick")
         driver.execute_script(onclick)
-        time.sleep(1.5)
+        time.sleep(2)
 
         ul_info = driver.find_element(
             By.XPATH, "/html/body/div[7]/div/div[1]/div/div/ul"
@@ -61,7 +61,7 @@ def process_li(li: WebElement, title: str):
         )
         onclick = close_btn.get_attribute("onclick")
         driver.execute_script(onclick)
-        time.sleep(0.5)
+        time.sleep(0.8)
 
         return [
             title,
@@ -109,41 +109,43 @@ for i in range(9, 13):
         print(f"Processing: {title}")
 
         processed = process_li(li, title)
-        if processed:
+        if len(processed) > 0:
+            # xlsx_data.append(processed)
             state[str(i)]["list"].append(title)
+            state[str(i)]["data"].append(processed)
             write_state(state)
 
-    workbook = openpyxl.Workbook()
-    sheet = workbook.active
+    # workbook = openpyxl.Workbook()
+    # sheet = workbook.active
 
-    sheet.title = f"Exhibitors IoT Expo China Hall {i}"
+    # sheet.title = f"Exhibitors IoT Expo China Hall {i}"
 
-    for row in xlsx_data:
-        sheet.append(row)
+    # for row in xlsx_data:
+    #     sheet.append(row)
 
-    table_range = f"A1:F{len(xlsx_data)}"
+    # table_range = f"A1:F{len(xlsx_data)}"
 
-    table = Table(displayName="ExhibitorTable", ref=table_range)
+    # table = Table(displayName="ExhibitorTable", ref=table_range)
 
-    style = TableStyleInfo(
-        name="TableStyleMedium9",
-        showFirstColumn=False,
-        showLastColumn=False,
-        showRowStripes=True,
-        showColumnStripes=True,
-    )
-    table.tableStyleInfo = style
+    # style = TableStyleInfo(
+    #     name="TableStyleMedium9",
+    #     showFirstColumn=False,
+    #     showLastColumn=False,
+    #     showRowStripes=True,
+    #     showColumnStripes=True,
+    # )
+    # table.tableStyleInfo = style
 
-    sheet.add_table(table)
-    
-    for row in range(2, len(xlsx_data) + 1):
-        cell = sheet.cell(row=row, column=5)
-        cell.hyperlink = cell.value
-        cell.style = "Hyperlink"
+    # sheet.add_table(table)
 
-    xlsx_data = [header_row]
+    # for row in range(2, len(xlsx_data) + 1):
+    #     cell = sheet.cell(row=row, column=5)
+    #     cell.hyperlink = cell.value
+    #     cell.style = "Hyperlink"
 
-    workbook.save(f"exhibitors-{i}.xlsx")
+    # xlsx_data = [header_row]
+
+    # workbook.save(f"exhibitors-{i}.xlsx")
 
     time.sleep(20)
 
